@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
 ]
 
+import django
+django.setup()
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

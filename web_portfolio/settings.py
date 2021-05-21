@@ -45,9 +45,6 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
 ]
 
-import django
-django.setup()
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -89,9 +86,10 @@ DATABASES = {
         'USER': 'ivdufxzdhbsmmb',
         'PASSWORD': '341b2379b3872eab7aa2413f013870a1e164156b736cc288e881ba23ac5dc8c2',
         'HOST': 'ec2-52-45-73-150.compute-1.amazonaws.com',
-        'PORT': '5432'
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
@@ -140,3 +138,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+import django
+django.setup()

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+    <!-- https://p.w3layouts.com/demos/apr-2016/12-04-2016/resume/web/ -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pierre Merlet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="">
+</head>
+
+<body class="box-content relative font-mono">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class='z-50 fixed flex shadow-md w-full h-auto font-bold bg-white font-sans text-center text-xs md:text-base'>
+        <a href='/' class='inline-block flex-1 py-4 hover:bg-blue-900 hover:text-white lg:ml-40'>ABOUT ME</a>
+        <a href='/experiences' class='inline-block flex-1 py-4 hover:bg-blue-900 hover:text-white'>EXPERIENCES</a>
+        <a href='/education' class='inline-block flex-1 py-4 hover:bg-blue-900 hover:text-white'>EDUCATION</a>
+        <a href='/projects' class='inline-block flex-1 py-4 hover:bg-blue-900 hover:text-white lg:mr-40'>PROJECTS</a>
+    </nav>
+
+    <div class="bg-gray-200 h-min-full w-full py-16 md:py-24 px-8 md:px-32 lg:px-48">
+        {% block index %}
+        {% endblock %}
+
+        {% block experiences %}
+        {% endblock %}
+
+        {% block education %}
+        {% endblock %}
+    </div>
+
+
+    <script src="" async defer></script>
+</body>
+
+</html>

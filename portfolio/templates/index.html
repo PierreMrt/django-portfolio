@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block index %}
+
+
+{% load static %}
+<div class="grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-2">
+    <div class='bg-white row-start-1 lg:col-start-1 shadow w-full mx-auto p-4 lg:row-span-2'>
+        <img src="{% static 'profile.jpeg' %}" alt='profile image' class="shadow rounded-full w-5/6 lg:w-3/4 h-auto mx-auto border-none">
+        <div class='font-bold text-center text-2xl md:text-3xl mt-4'>Pierre MERLET</div>
+        <div class='text-center text-xl lg:text-2xl'>Data Analyst</div>
+    </div>
+
+    <div class='bg-white row-start-4 lg:row-start-1 lg:col-start-2 shadow w-full mx-auto pb-4'>
+        <div class='flex w-1/2 mx-auto font-extrabold py-4 text-center text-xs md:text-base lg:text-xl'>Looking for me ?</div>
+        <table class='table-fixed w-5/6 mx-auto text-xs md:text-base lg:text-base'>
+            <tbody>
+                <tr>
+                    <td class='w-12 p-2 lg:p-0 lg:py-2'><img src="{% static 'github-ico.png' %}" alt='github icon' class="shadow rounded-full"></td>
+                    <td><a href='https://github.com/PierreMrt' class='ml-2 lg:ml-8 hover:text-blue-500'>www.github.com/PierreMrt</a></td>
+                </tr>
+                <tr>
+                    <td class='w-12 p-2 lg:p-0 lg:py-2'><img src="{% static 'linkedin-ico.png' %}" alt='linkedin icon' class="shadow rounded-full"></td>
+                    <td><a href='https://www.linkedin.com/in/pierre-merlet-553028a9/' class='ml-2 lg:ml-8 hover:text-blue-500'>www.linkedin.com/</a></td>
+                </tr>
+                <tr>
+                    <td class='w-12 p-2 lg:p-0 lg:py-2'><img src="{% static 'email-ico.png' %}" alt='email icon' class="shadow rounded-full"></td>
+                    <td><a href='mailto:merlet.pierre@outlook.com' class='ml-2 lg:ml-8 hover:text-blue-500'>merlet.pierre@outlook.com</a></td>
+                </tr>
+                <tr>
+                    <td class='w-12 p-2 lg:p-0 lg:py-2'><img src="{% static 'phone-ico.png' %}" alt='phone icon' class="shadow rounded-full"></td>
+                    <td class=''><a href='mailto:merlet.pierre@outlook.com' class='ml-2 lg:ml-8 hover:text-blue-500'>+39 349 375 8386</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class='mx-auto row-start-3 lg:row-start-2 lg:col-start-2 my-auto lg:my-16 md:space-x-16 text-white text-sm md:text-xl'>
+        <a href="{% static 'resume.pdf' %}" class='inline-block rounded w-auto px-4 py-2 bg-blue-900 hover:bg-gray-900'>Download CV</a>
+        <a href='mailto:merlet.pierre@outlook.com' class='inline-block rounded w-auto px-4 py-2 bg-blue-900 hover:bg-gray-900'>Contact me</a>
+    </div>
+
+    <div class='bg-white row-start-2 lg:row-start-3 shadow w-full mx-auto p-8 lg:px-16 text-base md:text-lg text-center lg:col-span-2'>
+        Passionate about new technologies. I'm a coder enthousiast <br/>
+        Lorem ipsum dolor amet
+    </div>
+</div>
+{% endblock %}

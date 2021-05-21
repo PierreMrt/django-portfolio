@@ -12,3 +12,6 @@ def index(request):
 def education(request):
     education = Education().fetch_education()
     return render(request, 'education.html', {'education': education})
+
+def projects(request):
+    return render(request, 'projects.html')

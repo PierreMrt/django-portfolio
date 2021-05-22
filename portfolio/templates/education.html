@@ -14,29 +14,29 @@
     {% cycle 'col-start-6 col-end-10 mr-auto' 'col-start-1 col-end-5 ml-auto' as col_date silent %}
     {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' as row_number silent %}
 
-    <!-- left -->
-    <div class="flex flex-row-reverse md:contents">
-        <a href='{{ school.link }}' class="bg-white row-start-{{ row_number }} {{ col_number }} p-4 my-4 shadow-md hover:shadow-2xl">
-            <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">{{ school.title }}</h3>
-            <p class='text-xs md:text-sm md:text-base font-bold'>{{ school.school_name }}</p>
-            <p class='italic text-xs md:text-sm'>{{ school.location }}</p>
-            <p class='italic text-gray-500 text-xs md:hidden'>{{ school.start_date }} - {{ school.end_date }}</p>
-            <p class="text-xs md:text-base text-justify md:py-2">{{ school.description|linebreaksbr }}</p>
-        </a>
 
-        <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
-            <div class="h-full w-6 flex items-center justify-center">
-                <div class="h-full w-1 bg-white pointer-events-none"></div>
+        <div class="flex flex-row-reverse md:contents">
+            <a href='{{ school.link }}' class="bg-white row-start-{{ row_number }} {{ col_number }} p-4 my-4 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">{{ school.title }}</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>{{ school.school_name }}</p>
+                <p class='italic text-xs md:text-sm'>{{ school.location }}</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>{{ school.start_date }} - {{ school.end_date }}</p>
+                <p class="text-xs md:text-base text-justify md:py-2">{{ school.description|linebreaksbr }}</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-white pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
             </div>
-            <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
-        </div>
 
-        <div class="row-start-{{ row_number }} {{ col_date }} flex my-auto hidden md:block">
-            <div class="mx-auto font-extrabold text-lg">{{ school.start_date }} - {{ school.end_date }}</div>
+            <div class="row-start-{{ row_number }} {{ col_date }} flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">{{ school.start_date }} - {{ school.end_date }}</div>
+            </div>
         </div>
-    </div>
     {% endfor %}
     
+    </div>
 </div>
-
 {% endblock %}

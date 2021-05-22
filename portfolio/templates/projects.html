@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block projects %}
 
-<div class='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 lg:mt-16'>
+<div class='grid grid-cols-1 lg:grid-cols-3 gap-8 text-xs md:text-base mt-4 lg:mt-16'>
     {% for project in projects %}
-    <a href='{{ project.link }}' class='bg-white h-full shadow hover:shadow-2xl p-2'>
-        <img src="{{ project.image.url }}" alt='project image' class='object-contain h-1/2 mx-auto'>
-        <div class='font-bold text-center'>{{ project.title }}</div>
-        <div>{{ project.short_descr }}</div>
-        <div class='italic font-medium text-gray-500'>{{ project.tags }}</div>
+    <a href='{{ project.link }}' class='relative bg-white h-full shadow hover:shadow-2xl p-2'>
+        <img src="{{ project.image.url }}" alt='project image' class='object-cover mx-auto lg:h-64'>
+        <p class='font-bold text-center text-sm md:text-base my-2 lg:h-8'>{{ project.title }}</p>
+        <p class='lg:mb-8'>{{ project.short_descr }}</p>
+        <p class='lg:absolute bottom-0 italic font-medium text-gray-700 mt-2'>{{ project.tags }}</p>
     </a>
     {% endfor %}
 
-    <a href='https://github.com/PierreMrt/' class='bg-white md:col-span-3 mt-8 py-4 text-center shadow hover:shadow-2xl'>And many more on GitHub !</a>
+    <a href='https://github.com/PierreMrt/' class='bg-white lg:col-span-3 mt-8 lg:mb-48 py-4 text-sm md:text-base text-center shadow hover:shadow-2xl'>
+        And many more on <span class='underline'>GitHub</span> !</a>
 </div>
 
 {% endblock %}

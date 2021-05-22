@@ -5,7 +5,7 @@
     {% load static %}
     <div class='text-center'>
         <img src="{% static 'education-ico.png' %}" alt='' class='inline-block h-12 md:h-16'>
-        <h1 class='inline-block text-gray-900 font-extrabold font-sans text-xl mb-4 lg:mb-8'>EDUCATION</h1>   
+        <h1 class='inline-block font-extrabold font-sans text-xl mb-4 lg:mb-8'>EDUCATION</h1>   
     </div>
     <div class="flex flex-col md:grid grid-rows-4 grid-cols-9 mx-auto p-2 text-black">
         
@@ -26,9 +26,9 @@
 
             <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
                 <div class="h-full w-6 flex items-center justify-center">
-                    <div class="h-full w-1 bg-white pointer-events-none"></div>
+                    <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
                 </div>
-                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
+                <div class="w-6 h-6 absolute top-1/2 border-2 border-gray-800 -mt-3 rounded-full bg-white shadow"></div>
             </div>
 
             <div class="row-start-{{ row_number }} {{ col_date }} flex my-auto hidden md:block">

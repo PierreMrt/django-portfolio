@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Education, Experience
+from .models import Education, Experience, Project
 
 def experiences(request):
     experiences = Experience().fetch_experiences()
@@ -14,4 +14,8 @@ def education(request):
     return render(request, 'education.html', {'education': education})
 
 def projects(request):
-    return render(request, 'projects.html')
+    projects = Project().fetch_projects()
+    return render(request, 'projects.html', {'projects': projects})
+
+def skills(request):
+    return render(request, 'in_construction.html')

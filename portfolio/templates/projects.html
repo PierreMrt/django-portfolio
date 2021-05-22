@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 {% block projects %}
 
-<h1 class='text-3xl h-screen pt-32 text-red-600 font-extrabold text-center'>PAGE <br/>UNDER CONSTRUCTION
-<div class='text-black text-lg font-normal mt-4'>Come back later !</div></h1>
+<div class='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 lg:mt-16'>
+    {% for project in projects %}
+    <a href='{{ project.link }}' class='bg-white h-full shadow hover:shadow-2xl p-2'>
+        <img src="{{ project.image.url }}" alt='project image' class='object-contain h-1/2 mx-auto'>
+        <div class='font-bold text-center'>{{ project.title }}</div>
+        <div>{{ project.short_descr }}</div>
+        <div class='italic font-medium text-gray-500'>{{ project.tags }}</div>
+    </a>
+    {% endfor %}
+
+    <a href='https://github.com/PierreMrt/' class='bg-white md:col-span-3 mt-8 py-4 text-center shadow hover:shadow-2xl'>And many more on GitHub !</a>
+</div>
 
 {% endblock %}

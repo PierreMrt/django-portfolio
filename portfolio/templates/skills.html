@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block skills %}
+
+{% load static %}
+<div class='grid grid-cols-1 rows-auto gap-8 lg:gap-16'>
+    <div class='text-center'>
+        <img src="{% static 'skills-ico.png' %}" alt='' class='inline-block h-8 md:h-12'>
+        <h1 class='inline-block font-extrabold font-sans text-xl mb-4 lg:mb-8'>SKILLS</h1>   
+    </div>
+    <div class='w-5/6 lg:w-2/3 bg-white mx-auto text-center'>Graph langues</div>
+    <img src="{% static 'skills_wordcloud.png' %}" alt='wordcloud' class='mx-auto shadow w-5/6 lg:w-2/3'>
+</div>
+
+{% endblock %}

@@ -18,4 +18,4 @@ def projects(request):
     return render(request, 'projects.html', {'projects': projects})
 
 def skills(request):
-    return render(request, 'skills.html')
+    return render(request, 'in_construction.html')

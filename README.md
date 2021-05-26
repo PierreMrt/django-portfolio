@@ -2,6 +2,8 @@
 
 A website for my resume.
 
+[https://pierre-merlet.com/](https://pierre-merlet.com/)
+
 * Backend: Python and Django
 * Database: Postgresql
 * Frontend: Tailwind CSS and HTML

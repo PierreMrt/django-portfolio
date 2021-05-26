@@ -34,7 +34,7 @@
     </nav>
 
     <div class="bg-gray-200 h-max-full w-full py-16 md:py-24 px-8 md:px-32 lg:px-48">
-        <div class='hidden lg:block fixed bottom-20 bg-gray-800 text-white text-center rounded-full w-10 right-20 text-3xl font-extrabold animate-bounce'>↓</div>
+        <div id='arrow' class='hidden lg:block fixed bottom-20 bg-gray-800 text-white text-center rounded-full w-10 right-20 text-3xl font-extrabold animate-bounce'>↓</div>
         {% block index %}
         {% endblock %}
 
@@ -50,7 +50,21 @@
         {% block skills %}
         {% endblock %}
     </div>
-    <script src="" async defer></script>
+
+    <script>
+        window.onscroll = function() {
+            var limit = document.body.offsetHeight - window.innerHeight;
+            // window.alert(limit);
+
+            var scroll = window.scrollY;
+            if (scroll >= 0.8 * limit) {
+                document.getElementById('arrow').innerHTML = '';
+            } else {
+                document.getElementById('arrow').innerHTML = '↓';
+            }
+        }
+    </script>
+
 </body>
 
 <footer class='bg-gray-800 py-2'>

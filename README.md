@@ -8,6 +8,8 @@ A website for my resume.
 * Database: Postgresql
 * Frontend: Tailwind CSS and HTML
 
+![portfolio](https://user-images.githubusercontent.com/69766734/137705363-f98a6200-45e3-4673-8749-977226ef2901.png)
+
 ## Install steps
 1. clone repository: `git clone https://github.com/PierreMrt/django-portfolio.git`
 
@@ -20,5 +22,4 @@ A website for my resume.
 4. Install requirements: `pip install -r requirements.txt`
 
 5. Run server: 
-    * `cd web-portfolio/`
     * `python manage.py runserver`

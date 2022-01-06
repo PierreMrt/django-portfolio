@@ -21,5 +21,9 @@ A website for my resume.
 
 4. Install requirements: `pip install -r requirements.txt`
 
-5. Run server: 
+5. Create .env with environment variables
+    * SECRET_KEY=xxxxx
+    * DEBUG=True
+
+6. Run server: 
     * `python manage.py runserver`

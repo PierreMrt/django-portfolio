@@ -8,7 +8,6 @@ django-heroku==0.0.0
 heroku==0.1.4
 idna==3.3
 Pillow==9.0.0
-pkg_resources==0.0.0
 psycopg2-binary==2.9.3
 python-dateutil==1.5
 python-decouple==3.5

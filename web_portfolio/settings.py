@@ -30,7 +30,8 @@ DJANGO_SETTINGS_MODULE=config('DJANGO_SETTINGS_MODULE')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',
+                '127.0.0.1']
 
 
 # Application definition
@@ -83,11 +84,11 @@ WSGI_APPLICATION = 'web_portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd8tvril8s22g3r',
-        'USER': 'ivdufxzdhbsmmb',
-        'PASSWORD': '341b2379b3872eab7aa2413f013870a1e164156b736cc288e881ba23ac5dc8c2',
-        'HOST': 'ec2-52-45-73-150.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': 'django_portfolio',
+        'USER': 'admin',
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -146,6 +147,6 @@ context_processors = [
 ]
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+
 import django
 django.setup()

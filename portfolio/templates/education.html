@@ -8,20 +8,14 @@
         <h1 class='inline-block font-extrabold font-sans text-xl mb-4 lg:mb-8'>EDUCATION</h1>   
     </div>
     <div class="flex flex-col md:grid grid-rows-4 grid-cols-9 mx-auto p-2 text-black">
-        
-    {% for school in education reversed %}
-    {% cycle 'col-start-1 col-end-5 ml-auto' 'col-start-6 col-end-10 mr-auto' as col_number silent %}
-    {% cycle 'col-start-6 col-end-10 mr-auto' 'col-start-1 col-end-5 ml-auto' as col_date silent %}
-    {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' as row_number silent %}
-
 
         <div class="flex flex-row-reverse md:contents">
-            <a href='{{ school.link }}' class="bg-white row-start-{{ row_number }} {{ col_number }} p-4 my-4 shadow-md hover:shadow-2xl">
-                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">{{ school.title }}</h3>
-                <p class='text-xs md:text-sm md:text-base font-bold'>{{ school.school_name }}</p>
-                <p class='italic text-xs md:text-sm'>{{ school.location }}</p>
-                <p class='italic text-gray-500 text-xs md:hidden'>{{ school.start_date }} - {{ school.end_date }}</p>
-                <p class="text-xs md:text-base lg:text-justify md:py-2">{{ school.description|linebreaksbr }}</p>
+            <a href='https://www.mci.edu/en/' class="bg-white row-start-1 col-start-1 col-end-5 mr-auto p-4 my-4 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Erasmus Semester</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>MCI Innsbruck</p>
+                <p class='italic text-xs md:text-sm'>Innsbruck - Austria</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>2018</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">100% of courses in english: International Finance, Stategy, Innovation Management</p>
             </a>
 
             <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
@@ -31,11 +25,83 @@
                 <div class="w-6 h-6 absolute top-1/2 border-2 border-gray-700 -mt-3 rounded-full bg-white shadow"></div>
             </div>
 
-            <div class="row-start-{{ row_number }} {{ col_date }} flex my-auto hidden md:block">
-                <div class="mx-auto font-extrabold text-lg">{{ school.start_date }} - {{ school.end_date }}</div>
+            <div class="row-start-1 col-start-6 col-end-10 mr-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">2018</div>
             </div>
         </div>
-    {% endfor %}
+    
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://www.rennes-sb.fr/' class="bg-white row-start-2 col-start-6 col-end-10 mr-auto p-4 my-4 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Master in Economy and Management</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>ESC Rennes</p>
+                <p class='italic text-xs md:text-sm'>Rennes - France</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>2015 - 2019</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">100% of courses in English: Supply Chain
+                    Management, Purchasing, Finance, IT
+                    Management, Strategy</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 border-2 border-gray-700 -mt-3 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-2 col-start-1 col-end-5 ml-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">2015 - 2019</div>
+            </div>
+        </div>
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://www.amsterdamuas.com/' class="bg-white row-start-3 col-start-1 col-end-5 ml-auto p-4 my-4 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Erasmus Semester</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>Hogeschool van Amsterdam</p>
+                <p class='italic text-xs md:text-sm'>Amsterdam - Netherlands</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>2013</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">100% of courses in English: Finance
+                    (Investment, International Money and
+                    Finance), E-commerce</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 border-2 border-gray-700 -mt-3 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-3 col-start-6 col-end-10 mr-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">2013</div>
+            </div>
+        </div>
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://www.excelia-group.fr/' class="bg-white row-start-4 col-start-6 col-end-10 mr-auto p-4 my-4 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Bachelor Economy and Management</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>Excelia</p>
+                <p class='italic text-xs md:text-sm'>La Rochelle - France</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>2012 - 2015</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">50% of courses in English: International
+                    Business Management: Marketing,
+                    International Purchasing, Finance, Oral
+                    expression</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 border-2 border-gray-700 -mt-3 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-4 col-start-1 col-end-5 ml-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">2015 - 2019</div>
+            </div>
+        </div>
+
+    
     
     </div>
 </div>

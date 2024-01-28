@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
 <html>
 
     <!-- https://p.w3layouts.com/demos/apr-2016/12-04-2016/resume/web/ -->
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="">
 </head>
 
-<body class="box-content relative font-mono">
+<body class="flex flex-col min-h-screen box-content relative font-mono">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -36,8 +36,8 @@
         <a href='/projects' class='inline-block flex-auto py-4 hover:bg-blue-900 hover:text-white'>PROJECTS</a>
     </nav>
 
-    <div class="bg-gray-200 h-max-full w-full py-16 md:py-24 px-8 md:px-32 lg:px-48">
-        <div id='arrow' class='hidden lg:block fixed bottom-20 bg-gray-800 text-white text-center rounded-full w-10 right-20 text-3xl font-extrabold animate-bounce'>↓</div>
+    <div class="bg-gray-200 w-full py-16 flex-grow md:py-24 px-8 md:px-32 lg:px-48">
+        <div id='arrow' class='hidden lg:block fixed bottom-20 bg-gray-800 text-white text-center rounded-full w-10 right-20 text-3xl font-extrabold animate-bounce'></div>
         {% block index %}
         {% endblock %}
 
@@ -70,7 +70,7 @@
 
 </body>
 
-<footer class='bg-gray-800 py-2'>
+<footer class='w-full bg-gray-800 py-2 self-end'>
     <p class='text-right px-8 text-xs md:text-base text-white'>© <script type="text/javascript">document.write(new Date().getFullYear());</script> - Pierre Merlet</p>
 </footer>
 

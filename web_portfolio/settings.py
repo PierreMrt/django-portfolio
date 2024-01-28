@@ -31,7 +31,10 @@ DJANGO_SETTINGS_MODULE=config('DJANGO_SETTINGS_MODULE')
 DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = ['localhost',
-                '127.0.0.1']
+                '127.0.0.1',
+                '.com']
+
+CSRF_TRUSTED_ORIGINS = ['https://*.com']
 
 
 # Application definition

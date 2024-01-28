@@ -92,13 +92,7 @@ WSGI_APPLICATION = 'web_portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
-if os.environ.get("DEBUG") == False:
-    DATABASES = {
-        "default": dj_database_url.config(
-            default='postgresql://postgres:postgres@localhost:5432/mysite',
-            conn_max_age=600)
-                }
-else:
+if DEBUG == 'True':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -109,6 +103,12 @@ else:
             'PORT': '',
                 }
             }
+else:
+    DATABASES = {
+        "default": dj_database_url.config(
+            default='postgresql://postgres:postgres@localhost:5432/web_portfolio',
+            conn_max_age=600)
+                }
 
 
 

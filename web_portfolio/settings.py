@@ -34,6 +34,9 @@ ALLOWED_HOSTS = ['localhost',
                 '127.0.0.1',
                 '.com']
 
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:    
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 CSRF_TRUSTED_ORIGINS = ['https://*.com']
 
@@ -88,11 +91,11 @@ WSGI_APPLICATION = 'web_portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pierre-merlet_portfolio-db',
-        'USER': 'pierre-merlet',
+        'NAME': 'django_portfolio',
+        'USER': 'admin',
         'PASSWORD': config('DB_PASSWORD'),
-        'HOST': 'postgresql-pierre-merlet.alwaysdata.net',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

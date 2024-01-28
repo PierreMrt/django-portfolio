@@ -7,19 +7,17 @@
         <h1 class='inline-block font-extrabold font-sans text-xl mb-4 lg:mb-8'>EXPERIENCES</h1>   
     </div>
     <div class="flex flex-col md:grid grid-rows-4 grid-cols-9 mx-auto p-2 text-black">
-        
-    {% for experience in experiences reversed %}
-    {% cycle 'col-start-1 col-end-5 ml-auto' 'col-start-6 col-end-10 mr-auto' as col_number silent %}
-    {% cycle 'col-start-6 col-end-10 mr-auto' 'col-start-1 col-end-5 ml-auto' as col_date silent %}
-    {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' as row_number silent %}
 
         <div class="flex flex-row-reverse md:contents">
-            <a href='{{ experience.link }}' class="bg-white row-start-{{ row_number }} {{ col_number }} p-2 my-2 shadow-md hover:shadow-2xl">
-                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">{{ experience.title }}</h3>
-                <p class='text-xs md:text-sm md:text-base font-bold'>{{ experience.company }}</p>
-                <p class='italic text-xs md:text-sm'>{{ experience.location }}</p>
-                <p class='italic text-gray-500 text-xs md:hidden'>{{ experience.start_date }} - {{ experience.end_date }}</p>
-                <p class="text-xs md:text-base lg:text-justify md:py-2">{{ experience.description|linebreaksbr }}</p>
+            <a href='https://www.caissedesdepots.fr/en' class="bg-white row-start-1 col-start-1 col-end-5 ml-auto p-2 my-2 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Data Analyse</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>Caisse des dépôts et Consignation</p>
+                <p class='italic text-xs md:text-sm'>Angers - France</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>December 2021 - Today</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">Data Fraud Referent </br>
+                Data preparation and Analysis concerning Mon Compte Formation.</br>
+                Main topics includes: fraud and pattern detection, creation of workflows and reporting, automation of extractions from bigdata sources and VBA development.</br>
+                Tools: Alteryx, Tableau, SQL, Python, Spark, VBA</p>
             </a>
 
             <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
@@ -29,12 +27,138 @@
                 <div class="w-6 h-6 absolute top-1/2 -mt-3 border-2 border-gray-700 rounded-full bg-white shadow"></div>
             </div>
 
-            <div class="row-start-{{ row_number }} {{ col_date }} flex my-auto hidden md:block">
-                <div class="mx-auto font-extrabold text-lg">{{ experience.start_date }} - {{ experience.end_date }}</div>
+            <div class="row-start-1 col-start-6 col-end-10 mr-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">December 2021 - Today</div>
             </div>
 
         </div>
-    {% endfor %}
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://www.iveco.com/uk/Pages/Home-Page.aspx' class="bg-white row-start-2 col-start-6 col-end-10 mr-auto p-2 my-2 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Business Intelligence Analyst</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>IVECO</p>
+                <p class='italic text-xs md:text-sm'>Turin - Italy</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>October 2019 - October 2021</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">- Collection and standardization of data from different ERPs (ie: SAP) for data warehousing </br>
+                    - Access Database management for vehicles'stock, inflow and outflow </br>
+                    - Reporting for whole pre-owned department</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 border-2 border-gray-700 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-2 col-start-1 col-end-5 ml-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">October 2019 - October 2021</div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://www.mondigroup.com/home/' class="bg-white row-start-3 col-start-1 col-end-5 ml-auto p-2 my-2 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Project Management Intern</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>MONDI GROUP</p>
+                <p class='italic text-xs md:text-sm'>Vienna - Austria</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>August 2018 - December 2018</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">Internal consulting: Delivering commercial and
+                    supply chain projects including the
+                    improvement and automation of existing tools
+                    via Excel VBA, Qualitative and quantitative
+                    analysis (sales/forecasting data, maturity level)</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 border-2 border-gray-700 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-3 col-start-6 col-end-10 mr-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">August 2018 - December 2018</div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://www.agc-yourglass.com/en-FR/about-agc' class="bg-white row-start-4 col-start-6 col-end-10 mr-auto p-2 my-2 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Project Management Intern</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>AGC Automotive</p>
+                <p class='italic text-xs md:text-sm'>Louvain-la-Neuve - Belgium</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>January 2017 - July 2017</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">Customer service: Management of the project
+                    of revision of the Safety Stock, Leading
+                    meetings with different European managers,
+                    creation and improvement of tools and KPI for
+                    Customer Service and Demand Management</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 border-2 border-gray-700 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-4 col-start-1 col-end-5 ml-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">January 2017 - July 2017</div>
+            </div>
+
+        </div>      
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://particuliers.engie.fr/en.html' class="bg-white row-start-5 col-start-1 col-end-5 ml-auto p-2 my-2 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Purchasing Intern</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>ENGIE</p>
+                <p class='italic text-xs md:text-sm'>Nantes - France</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>May 2016 - December 2016</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">Purchasing: Involved in digital strategies for the
+                    development of purchasing tools, Negotiation
+                    for several projects, Purchasing performance
+                    reporting</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 border-2 border-gray-700 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-5 col-start-6 col-end-10 mr-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">May 2016 - December 2016</div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-row-reverse md:contents">
+            <a href='https://www.se.com/ww/en/' class="bg-white row-start-6 col-start-6 col-end-10 mr-auto p-2 my-2 shadow-md hover:shadow-2xl">
+                <h3 class="font-semibold text-blue-900 text-base md:text-lg mb-1">Project Management Intern</h3>
+                <p class='text-xs md:text-sm md:text-base font-bold'>SCHNEIDER ELECTRIC</p>
+                <p class='italic text-xs md:text-sm'>Fontenay-le-Comte - France</p>
+                <p class='italic text-gray-500 text-xs md:hidden'>May 2015 - August 2015</p>
+                <p class="text-xs md:text-base lg:text-justify md:py-2">Project Management: Creation of projects
+                    follow-up tools, Creation of Balance Scorecard
+                    measuring project management performance,
+                    Autonomy, Animating meetings</p>
+            </a>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-5">
+                <div class="h-full w-6 flex items-center justify-center">
+                    <div class="h-full w-1 bg-gray-700 pointer-events-none"></div>
+                </div>
+                <div class="w-6 h-6 absolute top-1/2 -mt-3 border-2 border-gray-700 rounded-full bg-white shadow"></div>
+            </div>
+
+            <div class="row-start-6 col-start-1 col-end-5 ml-auto flex my-auto hidden md:block">
+                <div class="mx-auto font-extrabold text-lg">May 2015 - August 2015</div>
+            </div>
+
+        </div>
+
     </div>
 </div>
 

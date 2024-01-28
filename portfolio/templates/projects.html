@@ -2,14 +2,28 @@
 {% block projects %}
 
 <div class='grid grid-cols-1 lg:grid-cols-3 gap-8 text-xs md:text-base mt-4 lg:mt-16'>
-    {% for project in projects %}
-    <a href='{{ project.link }}' class='relative bg-white h-full shadow hover:shadow-2xl p-2'>
-        <img src="{{ project.image.url }}" alt='project image' class='object-cover mx-auto lg:h-64'>
-        <p class='font-bold text-center text-sm md:text-base my-2 lg:h-8'>{{ project.title }}</p>
-        <p class='lg:mb-8'>{{ project.short_descr }}</p>
-        <p class='lg:absolute bottom-0 italic font-medium text-gray-700 mt-2'>{{ project.tags }}</p>
+    
+    <a href='https://github.com/PierreMrt/job_scraper' class='relative bg-white h-full shadow hover:shadow-2xl p-2'>
+        <img src="https://user-images.githubusercontent.com/69766734/120371868-b8ad6400-c316-11eb-80b2-b72cefdf27a7.png" alt='project image' class='object-cover mx-auto lg:h-64'>
+        <p class='font-bold text-center text-sm md:text-base my-2 lg:h-8'>Job Scraper</p>
+        <p class='lg:mb-8'>A website that allows you to set up job searches via the scraping of different platforms (linkedin, monster...) and filter precisely on your criterias.</p>
+        <p class='lg:absolute bottom-0 italic font-medium text-gray-700 mt-2'>#WebDesign #Django #WebScraping</p>
     </a>
-    {% endfor %}
+
+    <a href='https://github.com/PierreMrt/amazon_sentiment_analysis' class='relative bg-white h-full shadow hover:shadow-2xl p-2'>
+        <img src="https://user-images.githubusercontent.com/69766734/106483755-29e72280-64af-11eb-99c2-d8d8ca3b5bad.png" alt='project image' class='object-cover mx-auto lg:h-64'>
+        <p class='font-bold text-center text-sm md:text-base my-2 lg:h-8'>Sentiment Analysis</p>
+        <p class='lg:mb-8'>Sentiment analysis project, based on Amazon reviews. Training of machine learning models to be able to detect the positive or negative sentiment of a review.</p>
+        <p class='lg:absolute bottom-0 italic font-medium text-gray-700 mt-2'>#Machine Learning #Sentiment Analysis #Model Training</p>
+    </a>
+
+    <a href='https://github.com/PierreMrt/pathfinding' class='relative bg-white h-full shadow hover:shadow-2xl p-2'>
+        <img src="https://user-images.githubusercontent.com/69766734/105030431-11f5b480-5a54-11eb-9895-ec131199d09e.png" alt='project image' class='object-cover mx-auto lg:h-64'>
+        <p class='font-bold text-center text-sm md:text-base my-2 lg:h-8'>Pathfind Algorythm Visualisation</p>
+        <p class='lg:mb-8'>A simple project to visualize how some pathfinding algorythms behave, featuring A-Star and Dijkstra</p>
+        <p class='lg:absolute bottom-0 italic font-medium text-gray-700 mt-2'>#Algorythm #GUI #Visualisation</p>
+    </a>
+
 
     <a href='https://github.com/PierreMrt/' class='bg-white lg:col-span-3 mt-8 lg:mb-48 py-4 text-sm md:text-base text-center shadow hover:shadow-2xl'>
         And many more on <span class='underline'>GitHub</span> !</a>
